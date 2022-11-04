@@ -42,8 +42,9 @@ namespace DesafioProjetoHospedagem.Models
 
 			if (DiasReservados >= 10)
 			{
-				decimal descontoDiaria = valor * 10 / 100;
-				valor = valor - descontoDiaria;
+				decimal descontoDiaria = valor * Convert.ToDecimal(0.10);
+
+				valor += -descontoDiaria;
 			}
 			return valor;
 		}
